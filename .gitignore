@@ -8,6 +8,7 @@
 
 # 2) 放行顶层框架文件
 !/.gitignore
+!/.gitattributes
 !/AGENTS.md
 !/CLAUDE.md
 !/README.md

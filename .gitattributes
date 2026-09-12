@@ -1,0 +1,34 @@
+# 统一换行符，避免 Windows / macOS / Linux 之间产生无意义的 diff 噪音
+# 说明：https://git-scm.com/docs/gitattributes
+
+# 默认：自动识别文本，仓库存成 LF
+* text=auto eol=lf
+
+# 二进制文件不做任何转换
+*.pdf   binary
+*.doc   binary
+*.docx  binary
+*.ppt   binary
+*.pptx  binary
+*.xls   binary
+*.xlsx  binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.zip   binary
+*.7z    binary
+
+# Windows 专属脚本保持 CRLF（PowerShell 两种都认，按平台惯例走 CRLF）
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 明确声明为文本的常用类型
+*.md   text eol=lf
+*.py   text eol=lf
+*.tsv  text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.txt  text eol=lf
